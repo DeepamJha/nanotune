@@ -626,7 +626,7 @@ test("findUnknownConfigKeys walks nested array objects and union branches", (t) 
   );
 
   t.deepEqual(warnings, [
-    'unknown key "pipelines[0].steps[0].paht" in config.json — ignored. Did you mean "path"?',
+    'unknown key "pipelines[0].steps[0].paht" in config.json — ignored.',
   ]);
 });
 

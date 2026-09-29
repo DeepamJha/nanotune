@@ -241,9 +241,7 @@ function unwrapSchemas(schema: z.ZodType): z.ZodType[] {
 		return unwrapSchemas(schema.unwrap() as z.ZodType);
 	}
 	if (schema instanceof z.ZodUnion) {
-		return schema.options.flatMap(option =>
-			unwrapSchemas(option as z.ZodType),
-		);
+		return schema.options.flatMap(option => unwrapSchemas(option as z.ZodType));
 	}
 	return [schema];
 }
